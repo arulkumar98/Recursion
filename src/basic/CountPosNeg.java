@@ -1,3 +1,5 @@
+package basic;
+
 public class CountPosNeg {
     public static void main(String[] args) {
         int[] nums =  {-3,-2,-1,0,0,1,2};

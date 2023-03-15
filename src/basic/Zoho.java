@@ -1,3 +1,5 @@
+package basic;
+
 public class Zoho {
     public static void main(String[] args) {
         int a = 400000;

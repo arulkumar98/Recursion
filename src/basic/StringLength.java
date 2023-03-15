@@ -1,3 +1,5 @@
+package basic;
+
 public class StringLength {
     public static void main(String[] args) {
         String str = "Arul";

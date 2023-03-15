@@ -1,3 +1,5 @@
+package basic;
+
 public class CountNeg {
     public static void main(String[] args) {
         
