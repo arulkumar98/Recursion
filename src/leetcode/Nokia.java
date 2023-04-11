@@ -2,12 +2,12 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
-
-class Solution {
+//  letterCombinations LeetCode 17
+class Nokia {
     public static void main(String[] args) {
-        String num = "";
-        Solution solution = new Solution();
-        System.out.println(solution.letterCombinations(num));
+        String num = "123";
+        Nokia nokia = new Nokia();
+        System.out.println(nokia.letterCombinations(num));
     }
     public  List<String> letterCombinations(String digits) {
         List<String> list = new ArrayList<>();

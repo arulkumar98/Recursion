@@ -1,29 +1,38 @@
-package BackTracking;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NQueens {
+public class NQueens51 {
     public static void main(String[] args) {
-        boolean[][] box = new boolean[4][4];
-        System.out.println(queens(box, 0,new ArrayList<>()));
+        NQueens51 nQueens51 = new NQueens51();
+        System.out.println(nQueens51.solveNQueens(4));
+    }
+
+    public List<List<String>> solveNQueens(int n) {
+        boolean[][] board = new boolean[n][n];
+        return queens(board, 0,new ArrayList<>());
 
     }
 
+
+
     public static List<List<String>> queens(boolean[][] board, int row,List<List<String>> ans) {
         if (row == board.length) {
-            List<String> subList = new ArrayList<>();
+            List<String> rowList = new ArrayList<>();
             for (boolean[] arr : board) {
-                StringBuilder str = new StringBuilder();
-
+                List<String> subList = new ArrayList<>();
                 for (boolean element : arr) {
                     if (element) {
-                        str.append("Q");
-                    } else str.append(".");
-                    subList.add(str.toString());
+                        subList.add("Q");
+                    } else {
+                        subList.add(".");
+                    }
                 }
+                String rowString = String.join("", subList);
+                rowList.add(rowString);
             }
-            ans.add(subList);
+            ans.add(rowList);
             return ans;
         }
 
@@ -93,14 +102,14 @@ public class NQueens {
         return true;
     }
 
-    private static void display(boolean[][] board) {
-        for (boolean[] row : board) {
-            for (boolean element : row) {
-                if (element) {
-                    System.out.print("Q ");
-                } else System.out.print("X ");
-            }
-            System.out.println();
-        }
     }
-}
+
+
+
+
+
+
+
+
+
+
