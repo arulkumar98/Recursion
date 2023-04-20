@@ -1,4 +1,4 @@
-package BackTracking;
+package backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,12 +15,13 @@ public class Maze {
         System.out.println(Math.min(2,8));
 //        System.out.println(board[0].length-1);
 //        backTracking("", board, 0, 0);
-//        int[][] way = new int[board.length][board[0].length];
-//        backTrackingCount("",board,0,0,way,1);
+        int[][] way = new int[board.length][board[0].length];
+        backTrackingCount("",board,0,0,way,1);
 
     }
 
     public static void backTrackingCount(String pro, boolean[][] maze, int row, int col, int[][] path, int step) {
+
         if (row == maze.length - 1 && col == maze[0].length - 1) {
             path[row][col] = step;
             for (int[] num : path) {

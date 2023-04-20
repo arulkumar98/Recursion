@@ -19,7 +19,8 @@ public class selection {
             if (arr[col] > arr[max]) {
                 sort(arr, row, col + 1, col);
             } else sort(arr, row, col + 1, max);
-         } else {
+
+        } else {
             int temp = arr[max];
             arr[max] = arr[row - 1];
             arr[row - 1] = temp;

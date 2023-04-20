@@ -20,6 +20,7 @@ public class NQueens51 {
     public static List<List<String>> queens(boolean[][] board, int row,List<List<String>> ans) {
         if (row == board.length) {
             List<String> rowList = new ArrayList<>();
+
             for (boolean[] arr : board) {
                 List<String> subList = new ArrayList<>();
                 for (boolean element : arr) {
@@ -32,6 +33,7 @@ public class NQueens51 {
                 String rowString = String.join("", subList);
                 rowList.add(rowString);
             }
+
             ans.add(rowList);
             return ans;
         }
@@ -41,7 +43,6 @@ public class NQueens51 {
         //ok
 
         for (int col = 0; col < board.length; col++) {
-
             if (isSafe(board, row, col)) {
                 board[row][col] = true;
                 queens(board, row + 1,ans);

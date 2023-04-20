@@ -1,6 +1,4 @@
-package BackTracking;
-
-import java.util.Arrays;
+package backtracking;
 
 public class Sudoku {
     public static void main(String[] args) {

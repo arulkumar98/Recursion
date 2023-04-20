@@ -1,4 +1,4 @@
-package BackTracking;
+package backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,29 +42,7 @@ public class NQueens {
         return ans;
     }
 
-    private static boolean ifSafe(boolean[][] board, int row, int col) {
-        // vertical row
-        for (int i = 0; i < row; i++) {
-            if (board[i][col]) {
-                return false;
-            }
-        }
-        //   for left diagonal
-        int maxLeft = Math.min(row, col);
-        for (int i = 1; i <= maxLeft; i++) {
-            if (board[row - i][col - i]) {
-                return false;
-            }
-        }
-        // for right diagonal
-        int maxRight = Math.min(row, col);
-        for (int i = 1; i <= maxRight; i++) {
-            if (board[row - i][col + i]) {
-                return false;
-            }
-        }
-        return true;
-    }
+
 
     private static boolean isSafe(boolean[][] board, int row, int col) {
         // check vertical row
@@ -93,7 +71,7 @@ public class NQueens {
         return true;
     }
 
-    private static void display(boolean[][] board) {
+    public static void display(boolean[][] board) {
         for (boolean[] row : board) {
             for (boolean element : row) {
                 if (element) {
